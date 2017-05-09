@@ -1,0 +1,185 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Visualization</title>
+    <link rel="stylesheet" href="scatter.css" charset="utf-8">
+    <!-- <link href='//fonts.googleapis.com/css?family=Allerta' rel='stylesheet'> -->
+  </head>
+  <style>
+body {
+  /*  font-family: 'Allerta';*/
+    font-size: 18px;
+}
+
+span{
+
+  font-family: 'Allerta';font-size: 18px;
+
+}
+#scatter{
+  /*border-style: solid;*/
+}
+</style>
+  <body>
+"ACTORS"
+ <!-- border-style: solid; border-width:20px ;border-color: black" -->
+
+   
+    <div id="scatter" style="float:left;width:800px; height:540px;margin-bottom: 50px; margin-left: 10px; margin-right: 5px" >
+    <span><b> 
+    </br>
+     </br>
+    This is a scatter plot that shows correlation between IMDB score rated by IMDB users and Critic ratings for every award winning/nominated movie since 1995. In addition we have tried to visualize budget of these films through a color gradient. Additionally it also visualizes awards/nominations won by each film. The size of the circle increases with increase in number of awards won by a particular film. </b> </span>
+    </div>
+    
+    <div id = "tooltip" style="float:right;width:400px; height:740px; margin-bottom: 50px; margin-left: 1px; margin-right: 5px "> </div>
+
+
+
+
+
+ <div id="buttons" style="float:left;width:500px; height:150px;margin-bottom: 10px;margin-top: 100px; margin-right: 400px;  border-radius: 10px">
+     
+
+    <!-- reference: http://bl.ocks.org/peterssonjonas/4a0e7cb8d23231243e0e -->
+    <!-- <input type="button" name="xAxis" value="xAxis"> -->
+    <form name="myform" onSubmit="return handleClick()">
+        <input type="text" id="myVal" placeholder="Search movie">
+        <input name="Submit"  type="submit" value="Search!" >
+   </form>  
+
+    <form name="myform2" onSubmit="return actorClick()"> 
+        <input type="text" id="myVal2" placeholder="Search actor">
+        <input name="Submit"  type="submit" value="Search!" >
+   </form>  
+
+   <form name="myform3" onSubmit="return DirectorClick()"> 
+        <input type="text" id="myVal3" placeholder="Search Director">
+        <input name="Submit"  type="submit" value="Search!" >
+   </form> 
+
+   <form name="myform4" onSubmit="return GenreClick()"> 
+        <input type="text" id="myVal4" placeholder="Search Genre">
+        <input name="Submit"  type="submit" value="Search!" >
+        <!-- <button type="button" onclick="alert('Hello world!')">Click Me!</button> -->
+   </form> 
+
+
+      </div>
+
+   <div id="option1" style="float:left;width:900px; height:150px;margin-top: 10px; margin-right: 25px">
+
+   Click on any of the below genres to see movies that belong to that particular genre.
+   </br>
+   </br>
+    <input name="updateButton" 
+           type="button" 
+           value="Adventure" 
+           id = "button1"
+           onclick="Adventure()" />
+
+    <input name="updateButton" 
+           type="button" 
+           value="Comedy" 
+           id = "button2"
+           onclick="Comedy()" />
+
+    <input name="updateButton" 
+           type="button" 
+           value="Biography" 
+           id = "button3"
+           onclick="Bio()" />
+
+        <input name="updateButton" 
+           type="button" 
+           value="Action" 
+           id = "button4"
+           onclick="Action()" />
+
+      <input name="updateButton" 
+           type="button" 
+           value="Crime" 
+           id = "button5"
+           onclick="Crime()" />
+
+               <input name="updateButton" 
+           type="button" 
+           value="Drama" 
+           id = "button6"
+           onclick="Drama()" />
+
+               <input name="updateButton" 
+           type="button" 
+           value="History" 
+           id = "button7"
+           onclick="History()" />
+
+               <input name="updateButton" 
+           type="button" 
+           value="Music" 
+           id = "button8"
+           onclick="Music()" />
+
+               <input name="updateButton" 
+           type="button" 
+           value="Mystery" 
+           id = "button9"
+           onclick="Mystery()" />
+
+               <input name="updateButton" 
+           type="button" 
+           value="Romance" 
+           id = "button10"
+           onclick="Rom()" />
+
+               <input name="updateButton" 
+           type="button" 
+           value="Sport" 
+           id = "button11"
+           onclick="Sport()" />
+
+               <input name="updateButton" 
+           type="button" 
+           value="Western" 
+           id = "button12"
+           onclick="West()" />
+
+             <input name="updateButton" 
+           type="button" 
+           value="Sport" 
+           id = "button13"
+           onclick="Sport()" />
+
+               <input name="updateButton" 
+           type="button" 
+           value="Thrill" 
+           id = "button14"
+           onclick="Thrill()" />
+
+           <input name="updateButton" 
+           type="button" 
+           value="War" 
+           id = "button15"
+           onclick="War()" />
+</br>
+</br>
+</br>
+           <input name="updateButton" 
+           type="button" 
+           value="Reset" 
+           id = "button16"
+           onclick="reset()" />
+
+           <span> 
+    </span>
+</div>
+<div> 
+</div>
+
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <script src="scatter51.js" charset="utf-8"></script>
+  </body>
+</html>
+
+

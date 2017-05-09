@@ -1,0 +1,117 @@
+<html>
+
+<head>
+
+
+
+<!-- <script src="jquery-3.2.0.min.js"></script> -->
+<script src="jquery.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+<script type="text/javascript" src="conceptmapjs.js"></script>
+
+<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="conceptmapcss.css">
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+</head>
+<body> 
+
+<h6 align="center"> Award winning actors and movie genres 1995-2016</h6>
+
+
+<!-- style="width:800px;height:600px;"-->
+<div id = "graph" class = "conceptmap"></div>
+<!-- <div class = "container1" id = "container1" style="width:500px;height:600px;float:right;padding:10px 5px 15px 20px;"></div>
+-->
+<div id="selection" style="float:right;visibility:hidden;">
+&nbsp;&nbsp;&nbsp;<b>Select Actor:</b>
+<select name ="actor" onchange="actorSelector()" id="actor">
+<option selected disabled>Choose here</option>
+<option value="Adrien Brody">Adrien Brody</option>
+<option value="Alan Arkin">Alan Arkin</option>
+<option value="Alicia Vikander">Alicia Vikander</option>
+<option value="Angelina Jolie">Angelina Jolie</option>
+<option value="Anne Hathaway">Anne Hathaway</option>
+<option value="Benicio Del Toro">Benicio Del Toro</option>
+<option value="Brie Larson">Brie Larson</option>
+<option value="Casey Affleck">Casey Affleck</option>
+<option value="Cate Blanchett">Cate Blanchett</option>
+<option value="Catherine Zeta-Jones">Catherine Zeta-Jones</option>
+<option value="Charlize Theron">Charlize Theron</option>
+<option value="Chris Cooper">Chris Cooper</option>
+<option value="Christian Bale">Christian Bale</option>
+<option value="Christoph Waltz">Christoph Waltz</option>
+<option value="Christopher Plummer">Christopher Plummer</option>
+<option value="Colin Firth">Colin Firth</option>
+<option value="Cuba Gooding, Jr.">Cuba Gooding, Jr.</option>
+<option value="Daniel Day-Lewis">Daniel Day-Lewis</option>
+<option value="Denzel Washington">Denzel Washington</option>
+<option value="Eddie Redmayne">Eddie Redmayne</option>
+<option value="Emma Stone">Emma Stone</option>
+<option value="Forest Whitaker">Forest Whitaker</option>
+<option value="Frances McDormand">Frances McDormand</option>
+<option value="Geoffrey Rush">Geoffrey Rush</option>
+<option value="George Clooney">George Clooney</option>
+<option value="Gwyneth Paltrow">Gwyneth Paltrow</option>
+<option value="Halle Berry">Halle Berry</option>
+<option value="Heath Ledger">Heath Ledger</option>
+<option value="Helen Hunt">Helen Hunt</option>
+<option value="Helen Mirren">Helen Mirren</option>
+<option value="Hilary Swank">Hilary Swank</option>
+<option value="J.K. Simmons">J.K. Simmons</option>
+<option value="Jack Nicholson">Jack Nicholson</option>
+<option value="James Coburn">James Coburn</option>
+<option value="Jamie Foxx">Jamie Foxx</option>
+<option value="Jared Leto">Jared Leto</option>
+<option value="Javier Bardem">Javier Bardem</option>
+<option value="Jean Dujardin">Jean Dujardin</option>
+<option value="Jeff Bridges">Jeff Bridges</option>
+<option value="Jennifer Connelly">Jennifer Connelly</option>
+<option value="Jennifer Hudson">Jennifer Hudson</option>
+<option value="Jennifer Lawrence">Jennifer Lawrence</option>
+<option value="Jim Broadbent">Jim Broadbent</option>
+<option value="Judi Dench">Judi Dench</option>
+<option value="Julia Roberts">Julia Roberts</option>
+<option value="Julianne Moore">Julianne Moore</option>
+<option value="Juliette Binoche">Juliette Binoche</option>
+<option value="Kate Winslet">Kate Winslet</option>
+<option value="Kevin Spacey">Kevin Spacey</option>
+<option value="Kim Basinger">Kim Basinger</option>
+<option value="Leonardo DiCaprio">Leonardo DiCaprio</option>
+<option value="Lupita Nyong'o">Lupita Nyong'o</option>
+<option value="Mahershala Ali">Mahershala Ali</option>
+<option value="Marcia Gay Harden">Marcia Gay Harden</option>
+<option value="Marion Cotillard">Marion Cotillard</option>
+<option value="Mark Rylance">Mark Rylance</option>
+<option value="Matthew McConaughey">Matthew McConaughey</option>
+<option value="Melissa Leo">Melissa Leo</option>
+<option value="Meryl Streep">Meryl Streep</option>
+<option value="Michael Caine">Michael Caine</option>
+<option value="Mira Sorvino">Mira Sorvino</option>
+<option value="Morgan Freeman">Morgan Freeman</option>
+<option value="Natalie Portman">Natalie Portman</option>
+<option value="Nicolas Cage">Nicolas Cage</option>
+<option value="Nicole Kidman">Nicole Kidman</option>
+<option value="Octavia Spencer">Octavia Spencer</option>
+<option value="Patricia Arquette">Patricia Arquette</option>
+<option value="Penelope Cruz">Penelope Cruz</option>
+<option value="Philip Seymour Hoffman">Philip Seymour Hoffman</option>
+<option value="Rachel Weisz">Rachel Weisz</option>
+<option value="Reese Witherspoon">Reese Witherspoon</option>
+<option value="Renee Zellweger">Renee Zellweger</option>
+<option value="Roberto Benigni">Roberto Benigni</option>
+<option value="Robin Williams">Robin Williams</option>
+<option value="Russell Crowe">Russell Crowe</option>
+<option value="Sandra Bullock">Sandra Bullock</option>
+<option value="Sean Penn">Sean Penn</option>
+<option value="Susan Sarandon">Susan Sarandon</option>
+<option value="Tilda Swinton">Tilda Swinton</option>
+<option value="Tim Robbins">Tim Robbins</option>
+<option value="Viola Davis">Viola Davis</option>
+</select>
+<button type="reset" value="Reset" id = "reset" onclick="resetSelector()">Reset</button>
+</div> 
+
+</div>
+ </body>
+ </html>
