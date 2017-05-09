@@ -627,7 +627,7 @@ function gendraw(){
    
     .style("stroke", function(d) { 
      if (d.genres.search(currentSearchTerm) != -1){
-      return black;
+      return 'black';
      }
    })
 
