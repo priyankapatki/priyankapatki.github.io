@@ -79,17 +79,17 @@ var xMax = d3.max(data, function(d) { return d[xCat]; }) * 1.05,
   
   
 
-  var tip = d3.tip()
-      .attr("class", "d3-tip")
-      .offset([-10, 0])
-      .html(function(d) {
-        return "Movie: "+ d[mov]+ "<br>" + "<img src= "+ "https://people.ischool.berkeley.edu/~niavivek/info_webpage/Info_viz_project/scatter_plot/posters/poster_"+d.movie_id+ ".jpeg" 
-        + " height=" + "\"50\"" + "  width="+ "\"50\""+">"
+  // var tip = d3.tip()
+  //     .attr("class", "d3-tip")
+  //     .offset([-10, 0])
+  //     .html(function(d) {
+  //       return "Movie: "+ d[mov]+ "<br>" + "<img src= "+ "https://people.ischool.berkeley.edu/~niavivek/info_webpage/Info_viz_project/scatter_plot/posters/poster_"+d.movie_id+ ".jpeg" 
+  //       + " height=" + "\"50\"" + "  width="+ "\"50\""+">"
 
-        +"<br>"+"Critic Score: " + d[xCat] + "<br>" + "IMDB Score : " 
-        + d[yCat] +  "<br>" + "Director: " + d[dir]+  "<br>" + "Budget: " + d[colorCat] + "<br>" + "Wins: " + d.Winner 
-        + "<br>"+ "Nominations: " + d.Award+ "<br>"+ "Actors: " + d.actor1_name + ", " + d.actor2_name + ", " + d.actor3_name + ", " + d.actor4_name
-      });
+  //       +"<br>"+"Critic Score: " + d[xCat] + "<br>" + "IMDB Score : " 
+  //       + d[yCat] +  "<br>" + "Director: " + d[dir]+  "<br>" + "Budget: " + d[colorCat] + "<br>" + "Wins: " + d.Winner 
+  //       + "<br>"+ "Nominations: " + d.Award+ "<br>"+ "Actors: " + d.actor1_name + ", " + d.actor2_name + ", " + d.actor3_name + ", " + d.actor4_name
+  //     });
 
   var zoomBeh = d3.behavior.zoom()
       .x(x)
@@ -108,7 +108,8 @@ var xMax = d3.max(data, function(d) { return d[xCat]; }) * 1.05,
 
 
 
-  svg.call(tip);
+
+  // svg.call(tip);
 
   svg.append("rect")
       .attr("width", width)
